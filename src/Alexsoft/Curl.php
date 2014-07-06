@@ -240,7 +240,7 @@ class Curl
     {
         if (isset($this->response)) {
             list($responseParts['headersString'], $responseParts['body']) = explode("\r\n\r\n", $this->response, 2);
-            $responseParts['body'] = htmlspecialchars($responseParts['body']);
+
             $headers = explode("\r\n", $responseParts['headersString']);
 
             $cookies = [];
